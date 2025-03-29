@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(background-img.jpg);
+    background-size: cover;
+    background-color: skyblue;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#score, #timer, #highScore {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+}
+
+#score { top: 20px; }
+#timer { top: 60px; }
+#highScore { top: 100px; }
+
+#gameArea {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.balloon {
+    position: absolute;
+    width: 50px;
+    transition: transform 0.2s ease-out;
+    cursor: pointer;
+}
+
+/* Golden Balloon (Power-up) */
+.golden {
+    width: 60px;
+    filter: brightness(1.5);
+}
+
+#restartBtn {
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    background: red;
+    color: white;
+    border-radius: 5px;
+    display: none;
+}
