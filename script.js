@@ -10,6 +10,7 @@ const scoreDisplay = document.getElementById('score');
 const timerDisplay = document.getElementById('timer');
 const highScoreDisplay = document.getElementById('highScore');
 const restartBtn = document.getElementById('restartBtn');
+const level=document.getElementById('level')
 
 // 🎵 Sound Effects
 const popSound = new Audio('pop.mp3');
@@ -97,6 +98,8 @@ function startTimer() {
 
             // Every 10 seconds, increase difficulty
             if (timeLeft % 10 === 0) {
+                level++;
+                level.textContent=`Level:{level}`
                 speed += 0.5; // Increase balloon speed
                 spawnRate = Math.max(300, spawnRate - 150); // Increase spawn rate (max 3 balloons/sec)
 
