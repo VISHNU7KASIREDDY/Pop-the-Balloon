@@ -99,7 +99,7 @@ function startTimer() {
             // Every 10 seconds, increase difficulty
             if (timeLeft % 10 === 0) {
                 level++;
-                level.textContent=`Level:{level}`
+                level.textContent=`Level:${level}`
                 speed += 0.5; // Increase balloon speed
                 spawnRate = Math.max(300, spawnRate - 150); // Increase spawn rate (max 3 balloons/sec)
 
